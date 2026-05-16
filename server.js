@@ -1,15 +1,22 @@
 const express = require('express')
+const cors = require('cors')
 require('dotenv').config()
 
 const app = express()
 const authRoutes = require('./src/routes/authRoutes')
 const profileRoutes = require('./src/routes/profileRoutes')
 
+app.use(cors({
+  origin: ['http://localhost:5173', 'http://127.0.0.1:5173'],
+  credentials: true,
+}))
+
 // Middleware xử lý dữ liệu JSON từ request body
 app.use(express.json())
 
 app.use('/api/auth', authRoutes)
 app.use('/', profileRoutes)
+
 
 app.get('/', (req, res) => {
     res.json({

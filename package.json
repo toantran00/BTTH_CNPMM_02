@@ -11,14 +11,18 @@
   "license": "ISC",
   "description": "",
   "dependencies": {
+    "@reduxjs/toolkit": "^2.11.2",
+    "axios": "^1.16.0",
     "bcrypt": "^6.0.0",
+    "cors": "^2.8.6",
     "dotenv": "^17.4.2",
     "express": "^5.2.1",
     "express-rate-limit": "^8.5.0",
     "express-validator": "^7.3.2",
     "joi": "^18.2.1",
     "mysql2": "^3.22.3",
-    "nodemailer": "^8.0.7"
+    "nodemailer": "^8.0.7",
+    "react-redux": "^9.2.0"
   },
   "devDependencies": {
     "nodemon": "^3.1.14"
